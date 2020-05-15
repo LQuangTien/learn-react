@@ -9,13 +9,17 @@
   <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
   <script>
-    const Hello = React.createElement('div', null, "Hello Quang Tien");
-    const img = React.createElement('img',{
-      src: "https://loremflickr.com/320/240"
-    });
-    const container = React.createElement('div', null, Hello, img)
+    const bookName = [
+      "Book A",
+      "Book B",
+      "Book C"
+    ];
+    const bookA = React.createElement('li', null, bookName[0]);
+    const bookB = React.createElement('li', null, bookName[1]);
+    const bookC = React.createElement('li', null, bookName[2]);
+    const books = React.createElement('ul', null, bookA, bookB, bookC);
     const root = document.getElementById('root');
-    ReactDOM.render(container, root);
+    ReactDOM.render(books, root);
   </script>
 </body>
 </html>
